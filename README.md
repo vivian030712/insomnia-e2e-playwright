@@ -1,0 +1,325 @@
+Below is a **README.md** for the Playwright + TypeScript + Electron Insomnia E2E automation project.
+
+It includes:
+
+✔ Installation (Windows-ready)
+✔ How to run tests
+✔ Project structure
+✔ CI instructions
+✔ Test methodology (Equivalence Partitioning + others)
+✔ Additional tests (POST/PUT/DELETE, Mock Server, Environments)
+✔ Troubleshooting
+✔ Reporting
+
+---
+
+# 📘 **Insomnia E2E Test Automation (Playwright + TypeScript + Electron)**
+
+This project provides a full **End-to-End (E2E)** automation framework for **Insomnia**, using:
+
+* **Playwright** for UI automation
+* **Electron automation** to launch the Insomnia app
+* **TypeScript** for strong typing
+* **Test design methods** such as Equivalence Partitioning, BVA, State Transition, etc.
+* **Functional + Non-functional tests**
+* **Windows-friendly execution**
+* Optional **CI (GitHub Actions)** + **HTML reporting**
+
+---
+
+## 🚀 **1. Features**
+
+✔ Automates Insomnia’s **main workflow**:
+
+* Create Request
+* Configure URL / method
+* Send Request
+* Validate Response
+
+✔ Covers multiple request methods:
+
+* GET
+* POST
+* PUT
+* DELETE
+
+✔ Supports Insomnia advanced features:
+
+* **Environment variables**
+* **Mock Servers**
+* **Request history validation**
+* **Error validation**
+
+✔ Test design methods included:
+
+* **Equivalence Partitioning** (URL input validity)
+* **Boundary Value Analysis** (URL length / payload size)
+* **State Transition Testing** (Create → Edit → Send → History)
+* **Decision Table** (method × environment × URL validity)
+
+✔ Functional + non-functional test types:
+
+* Unit-like UI checks
+* Integration (mock server + environment)
+* System test (full request workflow)
+* Acceptance test (real-user scenario)
+* Usability + compatibility checks
+
+---
+
+## 📦 **2. Project Structure**
+
+```
+insomnia-e2e-playwright/
+│ package.json
+│ playwright.config.ts
+│ tsconfig.json
+│ README.md
+│
+└── tests/
+    │ insomnia-main-workflow.spec.ts
+    │ equivalence-partitioning-url.spec.ts
+    │ environment-tests.spec.ts
+    │ mock-server-tests.spec.ts
+    │ api-method-tests.spec.ts
+    │
+    └── helpers/
+        electron-launch.ts
+        insomnia-locators.ts
+```
+
+---
+
+## 🧰 **3. Installation (Windows)**
+
+### **Prerequisites**
+
+Install:
+
+* Node.js ≥ 18
+* Git
+* Windows PowerShell or CMD
+
+### **Install dependencies**
+
+```bash
+npm install
+```
+
+### **Install Playwright browsers (required even for Electron)**
+
+```bash
+npx playwright install
+```
+
+---
+
+## ▶️ **4. Running the Tests**
+
+### **Run all tests**
+
+```bash
+npx playwright test
+```
+
+### **Run a specific test**
+
+```bash
+npx playwright test tests/equivalence-partitioning-url.spec.ts
+```
+
+### **Run with UI**
+
+```bash
+npx playwright test --ui
+```
+
+---
+
+## 📊 **5. View Test Reports**
+
+### After test execution:
+
+```bash
+npx playwright show-report
+```
+
+Reports are generated at:
+
+```
+playwright-report/
+```
+
+Supports:
+
+* HTML report
+* Trace viewer
+* Video recording (optional)
+
+---
+
+## 🧪 **6. Included Test Cases**
+
+### 🔹 **1. Main Workflow Test**
+
+`insomnia-main-workflow.spec.ts`
+
+* Create new request
+* Set URL
+* Set method
+* Send request
+* Validate response status/body/headers
+* Validate history entry
+
+---
+
+### 🔹 **2. Equivalence Partitioning URL Test**
+
+`equivalence-partitioning-url.spec.ts`
+
+Partitions:
+
+**Valid:**
+
+* HTTP URL
+* HTTPS URL
+* localhost
+* JSON endpoints
+
+**Invalid:**
+
+* Empty
+* Malformed
+* Unsupported protocols
+* Whitespace-only
+
+Additional assertions:
+
+* Send button enabled/disabled
+* Error banner visible
+* No response panel for invalid URL
+* History not created
+
+---
+
+### 🔹 **3. Environment Variable Test**
+
+`environment-tests.spec.ts`
+
+* Create environment
+* Inject variables
+* Validate substitution
+* Send request using environment
+
+---
+
+### 🔹 **4. Mock Server Test**
+
+`mock-server-tests.spec.ts`
+
+* Start mock server
+* Create mock route
+* Validate mock response
+* Validate headers & latency
+
+---
+
+### 🔹 **5. POST / PUT / DELETE Tests**
+
+`api-method-tests.spec.ts`
+
+* POST: Send JSON payload
+* PUT: Update payload
+* DELETE: Validate removal
+* Assert response codes & bodies
+
+---
+
+## 🧩 **7. CI Integration (GitHub Actions)**
+
+Create `.github/workflows/playwright.yml`:
+
+```yaml
+name: Insomnia E2E Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+```
+
+---
+
+## 🔧 **8. Troubleshooting**
+
+### ❗ **Playwright Error: “No tests found”**
+
+Check:
+
+* Folder is named `tests`
+* File ends with `.spec.ts`
+* No syntax errors
+* Playwright installed
+
+### ❗ Electron app fails to launch
+
+* Ensure Insomnia is installed in default path
+* Adjust path in `electron-launch.ts`
+
+### ❗ Locators not found
+
+Insomnia updates DOM frequently → adjust locators in:
+
+```
+insomnia-locators.ts
+```
+
+---
+
+## ⭐ **9. Recommended Future Enhancements**
+
+* Data-driven testing for URLs and payloads
+* Contract testing using Insomnia design documents
+* Load testing via Inso CLI
+* Parallel mock server orchestration
+* Test coverage reporting (NYC + LCOV)
+
+---
+
+# 🎉 **10. Summary**
+
+This project gives you a **complete Insomnia automation framework** with:
+
+* E2E UI tests
+* Electron automation
+* Modern TypeScript tooling
+* Advanced QA methodologies
+* Windows + CI support
+
