@@ -1,0 +1,16 @@
+{
+  "name": "insomnia-e2e-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "install:drivers": "npx playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^5.3.0"
+  }
+}

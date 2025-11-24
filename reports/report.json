@@ -1,0 +1,480 @@
+{
+  "config": {
+    "configFile": "C:\\vwu\\kong\\insomnia-e2e-playwright\\playwright.config.ts",
+    "rootDir": "C:/vwu/kong/insomnia-e2e-playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 7
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/vwu/kong/insomnia-e2e-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/vwu/kong/insomnia-e2e-playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "equivalence-partitioning-url.spec.ts",
+      "file": "equivalence-partitioning-url.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "URL Input – Equivalence Partitioning Assertions",
+          "file": "equivalence-partitioning-url.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Valid Partition: Valid HTTP URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.616Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-b51d5484fa590e03f7d6",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "Valid Partition: Valid HTTPS URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.613Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-a47c769da3749fbc8fad",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "Valid Partition: Valid localhost URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.632Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-7764d89a10af1d8e4ceb",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "Invalid Partition: Empty string",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.647Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-92bd1777ecd3d0c350da",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 88,
+              "column": 9
+            },
+            {
+              "title": "Invalid Partition: Malformed URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.639Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-ff9dc3d3da363b9fabb9",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 88,
+              "column": 9
+            },
+            {
+              "title": "Invalid Partition: Unsupported protocol",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.670Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-53e08a8807d7153be5b1",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 88,
+              "column": 9
+            },
+            {
+              "title": "Invalid Partition: Whitespace only",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-24T18:45:31.653Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78871c4eed30fba12c90-29e8c29de1adfd9bf7ce",
+              "file": "equivalence-partitioning-url.spec.ts",
+              "line": 88,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insomnia-delete-request.spec.ts",
+      "file": "insomnia-delete-request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "DELETE Request: Delete resource",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df7e9e8605badd13c038-f73cddfa5037352d77f9",
+          "file": "insomnia-delete-request.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "insomnia-main-workflow.spec.ts",
+      "file": "insomnia-main-workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insomnia Main Workflow - Create / Send / Validate Request",
+          "file": "insomnia-main-workflow.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "E2E: Create → Send → Validate HTTP Request",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0e1aa24d337bc0996fc1-b6ae2ad231fe610000ad",
+              "file": "insomnia-main-workflow.spec.ts",
+              "line": 9,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insomnia-mock-server.spec.ts",
+      "file": "insomnia-mock-server.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mock Server: Create → Add Route → Validate Response",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c9ffbe2b2db6930aadd6-6bb270c64eb68ae1fbca",
+          "file": "insomnia-mock-server.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "insomnia-post-request.spec.ts",
+      "file": "insomnia-post-request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POST Request: Create new resource",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "2e1ee80b3cf63b68e860-b748d595ec7f3f6931ae",
+          "file": "insomnia-post-request.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "insomnia-put-request.spec.ts",
+      "file": "insomnia-put-request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "PUT Request: Update existing resource",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f609b5c12005f3254f36-eb9340d2654e7c6df6bd",
+          "file": "insomnia-put-request.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-24T18:45:30.853Z",
+    "duration": 57708.647,
+    "expected": 0,
+    "skipped": 12,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
