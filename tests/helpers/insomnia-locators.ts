@@ -8,9 +8,7 @@ export const locators = {
   newRequestButton: '[data-testid="request-create-button"]',
   requestNameInput: '[data-testid="request-name-input"]',
   createRequestConfirm: '[data-testid="request-create-done"]',
-  urlInput: '[data-testid="url-input"]',
-  sendButton: '[data-testid="send-request-button"]',
-  responseStatus: '[data-testid="response-status"]',
+ 
   errorBanner: '[data-testid="error-message"]',
 
 
